@@ -1,0 +1,4 @@
+#Requierments:
+#pm4py package
+#graphviz package
+#if code asks for more packages, install them. Don't install Pulp if asked. It doesn't work.

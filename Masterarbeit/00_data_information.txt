@@ -1,0 +1,23 @@
+Aufbau der Daten (Spalten erklärt):
+id: selbsterklärend
+Q1-8: Fragebogen
+
+Q1: Did you perceive tinnitus right now? - Am wichtigsten für die Vorhersage - binär
+Q2: How loud is the tinnitus right now? - Skala 0-10
+Q3: How stressful is the tinnitus right now? - Skala 0-10
+Q4: How is your mood right now? - Skala 0-10
+Q5: How is your arousal right now? - Skala 0-10
+Q6: Do you feel stressed right now? - Skala 0-10
+Q7: How much did you concentrate on the things you are doing right now? - Skala 0-10
+Q8: Do you feel irritable right now? - Wird meist vernachlässigt bei deren Auswertung - binär
+
+Soundlevel: Umgebungslautstärke der ersten 30 Sekunden als Mittelwert (iOS und Android verschieden) - sound_env nehmen, User aber trotzdem nach OS unterscheiden
+sound_env: Umgebungslautstärke angepasst und mit "." separiert
+sound_env2: Umgebungslautstärke angepasst und mit "," separiert
+Save_date: als Zeitstempel hernehmen
+Notification: unwichtig
+Age: wichtig - eher als Geburtstag nehmen
+Family history 0 = nein / 1 = ja
+Gender 0 = männlich / 1 = weiblich
+Handedness: 0 = rechts / 1 = links / 2 = beidseitig
+Onset_duration: Wie lange die schon Tinnitus haben

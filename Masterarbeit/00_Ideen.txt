@@ -1,0 +1,5 @@
+1.  man könnte alle Einträge entfernen, die nur einmalig waren. Also jede Person, die nur einen Eintrag gemacht hat wird entfernt.
+    man könnte die einmaligen aber auch drin lassen und trotzdem hernehmen.
+
+2.  wenn q1 = 1, dann schauen wie oft sich das wieder zu q1 = 1 dreht und wann zu q1 = 0.
+    zudem q1 Werte irgendwie mit in die Grafiken einfließen lassen
