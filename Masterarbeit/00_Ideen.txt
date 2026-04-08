@@ -6,22 +6,42 @@
     zudem q1 Werte irgendwie mit in die Grafiken einfließen lassen
 
 
-3.1 anstatt nur low / medium / high als zustand zu haben könnte man auch mehrere zustände einführen (5 zustände / 20%
-    der ganzen daten / ...)
+3.1 Anstatt nur low / medium / high als Zustand zu haben, könnte man auch mehrere Zustände einführen (5 Zustände / 20%
+    der ganzen Daten / ...)
     3 Klassen (Baseline)
     5 Klassen
     evtl. quantilbasiert (z. B. 20%-Bins)
 
-| Granularität       | Effekt                             |
-| ------------------ | ---------------------------------- |
-| **3 Stufen**       | stabil, aber grob                  |
-| **5 Stufen**       | mehr Struktur, aber mehr Varianten |
-| **kontinuierlich** | unbrauchbar für PM                 |
-
-
 3.2 Log-Preprocessing
-    mit vs ohne Wiederholungen, hier also gleiche /mehrfache verläufe entfernen. würde jedoch schlecht sein, wenn man
-    mit prognosen arbeitet
+    Mit vs ohne Wiederholungen, hier also gleiche /mehrfache Verläufe entfernen. Würde jedoch schlecht sein, wenn man
+    mit Prognosen arbeitet
 
 3.3 Missing Data Handling
     Drop vs Impute vs Ignore
+
+
+
+Jetzt habe ich verschiedene Versionen für die Datenvorverarbeitung. Jeweils pro Person ein Case mit den dazugehörigen
+Einträgen (Events). Jetzt wäre es interessant, sich das Ganze so anzuschauen, dass vielleicht Rückschlüsse gezogen
+werden können. Je nach dem in welchem Level die Personen sich befinden, dementsprechend haben die eine
+Wahrscheinlichkeit von X% Tinnitus zu haben. Hier auch mit einfließen lassen, ob die aktuell Tinnitus haben oder nicht.
+
+schauen wie sich der Tinnitus entwickelt:
+    - je nach Verlauf (Level 3 - Level 4 - Level 3 --> dann in der Regel Tinnitus)
+    - wenn sich Person X zum letzten Aufnahmezeitpunkt in Level X befindet, dann morgen Tinnitus (nicht) wahrscheinlich
+    - welche Rolle es spielt, ob der Tinnitus gerade vorhanden ist (q1=1 oder q1=0)
+
+
+was ich nicht will:
+    - wissen wie viele Personen z.B. in Level 3 Tinnitus haben (weil die Level sich ja mit jedem Eintrag ändern können)
+
+möglicher Aufbau:
+    - Cases in Level unterteilen (mehrere Ansätze, aber zuerst mal alles an einem Ansatz bis zum Ende fahren. Dann
+    auf die anderen übertragen)
+    - wie stark ist der Score in jedem Level? / bzw bis wohin geht der Score je Level? (Level 1 von 0-12, ...)
+    - wie hoch ist die Wahrscheinlichkeit, wenn ich in Level X bin, dass ich Tinnitus haben werde?
+    - wie muss der Verlauf aussehen, dass ich Tinnitus prognostizieren/absagen kann
+
+    - das Ganze dann öfters durchgehen. je nach missing data strategie 1x
+    - wenn ich dann das "beste" gefunden habe, Mining anwenden und die Algorithmen fine tunen bis sie "sehr gut" sind
+      (overfitting vermeiden)
