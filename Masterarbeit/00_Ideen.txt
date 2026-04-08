@@ -1,5 +1,27 @@
-1.  man könnte alle Einträge entfernen, die nur einmalig waren. Also jede Person, die nur einen Eintrag gemacht hat wird entfernt.
+1.  man könnte alle Einträge entfernen, die nur einmalig waren. Also jede Person, die nur einen Eintrag gemacht hat
+    wird entfernt.
     man könnte die einmaligen aber auch drin lassen und trotzdem hernehmen.
 
 2.  wenn q1 = 1, dann schauen wie oft sich das wieder zu q1 = 1 dreht und wann zu q1 = 0.
     zudem q1 Werte irgendwie mit in die Grafiken einfließen lassen
+
+
+3.1 anstatt nur low / medium / high als zustand zu haben könnte man auch mehrere zustände einführen (5 zustände / 20%
+    der ganzen daten / ...)
+    3 Klassen (Baseline)
+    5 Klassen
+    evtl. quantilbasiert (z. B. 20%-Bins)
+
+| Granularität       | Effekt                             |
+| ------------------ | ---------------------------------- |
+| **3 Stufen**       | stabil, aber grob                  |
+| **5 Stufen**       | mehr Struktur, aber mehr Varianten |
+| **kontinuierlich** | unbrauchbar für PM                 |
+
+
+3.2 Log-Preprocessing
+    mit vs ohne Wiederholungen, hier also gleiche /mehrfache verläufe entfernen. würde jedoch schlecht sein, wenn man
+    mit prognosen arbeitet
+
+3.3 Missing Data Handling
+    Drop vs Impute vs Ignore
