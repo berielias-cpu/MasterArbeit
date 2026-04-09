@@ -13,14 +13,17 @@ was ich nicht will:
 
 
 Vorgehen:
+Alles erstmal an einem Baseline-Modell durchgehen und anschließend auf andere Modelle übertragen.
+
 1. Daten aufbereiten:
     - Spalten löschen (done)
-    - Missing Data Strategie anwenden 0/5/median/mittelwert/löschen/ignorieren (Drop/Impute/Ignore)
+    - Level einführen. Je nach Zustand der Personen eine Einordnung in Level vornehmen (3/5/quantilbasierte Level). (done)
+    Wie hoch ist der Score je Level? Wie viele Personen / Traces sind in jedem Level und welche Bedeutung hat das?
+    0-12, 13-24, ... / 0-20, 21-40, ... / 0-5, 6-8, 9-15, ... .
+    - Missing Data Strategie anwenden 0/5/10/median/mittelwert/löschen/ignorieren (Drop/Impute/Ignore)
     - Daten evtl. splitten. Einmalige Einträge von mehrfachen Einträgen separieren. Vielleicht dann genauere Prognosen möglich.
-    - Level einführen. Je nach Zustand der Personen eine Einordnung in Level vornehmen (3/5/quantilbasierte Level)
-    wie hoch ist der Score je Level? 0-12, 13-24, ... / 0-20, 21-40, ... / 0-5, 6-8, 9-15, ...
-    - Werte die zur Verfügung stehen Stück für Stück für die Auswertung hernehmen.
-    - Log Preprocessing. Mit und/oder ohne Wiederholungen von Logs. Also mehrfache gleiche Verläufe auf einen reduzieren bzw. lassen.
+    - Werte, die zur Verfügung stehen, Stück für Stück für die Auswertung hernehmen.
+    - Log Preprocessing. Mit und/oder ohne Wiederholungen von Logs. Also mehrfache gleiche Verläufe auf einen reduzieren oder stehen lassen.
 
 2. Algorithmen:
     - Krankheitsverlauf nach Level mit Berücksichtigung Tinnitus 1/0 und/oder Zeitabstände minen
