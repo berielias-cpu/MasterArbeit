@@ -1,23 +1,9 @@
-Jetzt habe ich verschiedene Versionen für die Datenvorverarbeitung. Jeweils pro Person ein Case mit den dazugehörigen
-Einträgen (Events). Jetzt wäre es interessant, sich das Ganze so anzuschauen, dass vielleicht Rückschlüsse gezogen
-werden können. Je nach dem in welchem Level die Personen sich befinden, dementsprechend haben die eine
-Wahrscheinlichkeit von X% Tinnitus zu haben. Hier auch mit einfließen lassen, ob die aktuell Tinnitus haben oder nicht.
-
-schauen wie sich der Tinnitus entwickelt:
-    - je nach Verlauf (Level 3 - Level 4 - Level 3 --> dann in der Regel Tinnitus)
-    - wenn sich Person X zum letzten Aufnahmezeitpunkt in Level X befindet, dann morgen Tinnitus (nicht) wahrscheinlich
-    - welche Rolle es spielt, ob der Tinnitus gerade vorhanden ist (q1=1 oder q1=0) --> Gewichtung >50% geben?
-
-was ich nicht will:
-    - wissen wie viele Personen z.B. in Level 3 Tinnitus haben (weil die Level sich ja mit jedem Eintrag ändern können)
-
-
 Vorgehen:
 Alles erstmal an einem Baseline-Modell durchgehen und anschließend auf andere Modelle übertragen.
 
 1. Daten aufbereiten:
     - Spalten löschen (done)
-    - Level einführen. Je nach Zustand der Personen eine Einordnung in Level vornehmen (3/5/quantilbasierte Level). (done)
+    - Level einführen. Ist die Summe der Antworten von q2-q7. Je nach Zustand der Personen eine Einordnung in Level vornehmen (3/5/quantilbasierte Level). (done)
     Wie hoch ist der Score je Level? Wie viele Personen / Traces sind in jedem Level und welche Bedeutung hat das?
     0-12, 13-24, ... / 0-20, 21-40, ... / 0-5, 6-8, 9-15, ... .
     - Missing Data Strategie anwenden 0/5/10/median/mittelwert/löschen/ignorieren (Drop/Impute/Ignore)
@@ -41,3 +27,18 @@ Alles erstmal an einem Baseline-Modell durchgehen und anschließend auf andere M
     - Wie hoch ist die Wahrscheinlichkeit, wenn ich in Level X bin, dass ich Tinnitus haben werde?
     - 1/3/5/alle Tage zur Prognose hernehmen
     - einzelne Prognosen evaluieren und miteinander vergleichen
+
+
+
+Jetzt habe ich verschiedene Versionen für die Datenvorverarbeitung. Jeweils pro Person ein Case mit den dazugehörigen
+Einträgen (Events). Jetzt wäre es interessant, sich das Ganze so anzuschauen, dass vielleicht Rückschlüsse gezogen
+werden können. Je nach dem in welchem Level die Personen sich befinden, dementsprechend haben die eine
+Wahrscheinlichkeit von X% Tinnitus zu haben. Hier auch mit einfließen lassen, ob die aktuell Tinnitus haben oder nicht.
+
+schauen wie sich der Tinnitus entwickelt:
+    - je nach Verlauf (Level 3 - Level 4 - Level 3 --> dann in der Regel Tinnitus)
+    - wenn sich Person X zum letzten Aufnahmezeitpunkt in Level X befindet, dann morgen Tinnitus (nicht) wahrscheinlich
+    - welche Rolle es spielt, ob der Tinnitus gerade vorhanden ist (q1=1 oder q1=0) --> Gewichtung >50% geben?
+
+was ich nicht will:
+    - wissen wie viele Personen z.B. in Level 3 Tinnitus haben (weil die Level sich ja mit jedem Eintrag ändern können)
