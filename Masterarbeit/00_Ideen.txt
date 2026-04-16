@@ -21,9 +21,9 @@ Alles erstmal an einem Baseline-Modell durchgehen und anschließend auf andere M
     verschiedenen Datensätzen
 
 3. Prognosen:
-    - mit Miriam reden. Was wollen wir genau machen? Vorhersagen treffen auf welche Daten? Entfernen wir je den letzten
-    Eintrag und sagen diesen dann anhand der vorherigen Einträge vorher? Oder gibt's einen neueren Datensatz auf den wir
-    vorhersagen können? (erste Variante wäre mir lieber)
+    - Was wollen wir genau machen? -> Anhand aller Features, die wir haben, den Zustand von q1 vom Folgetag vorhersagen.
+    - Dabei entfernen wir je den letzten Eintrag und sagen diesen dann anhand der vorherigen Einträge vorher.
+
     - Wie muss der Verlauf aussehen, damit ich Tinnitus prognostizieren kann?
     - Wie hoch ist die Wahrscheinlichkeit, wenn ich in Level X bin, dass ich Tinnitus haben werde?
     - 1/3/5/alle Tage zur Prognose hernehmen

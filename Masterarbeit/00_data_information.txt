@@ -2,14 +2,14 @@ Aufbau der Daten (Spalten erklärt):
 id: selbsterklärend
 Q1-8: Fragebogen
 
-Q1: Did you perceive tinnitus right now? - Am wichtigsten für die Vorhersage - binär
-Q2: How loud is the tinnitus right now? - Skala 0-10
-Q3: How stressful is the tinnitus right now? - Skala 0-10
-Q4: How is your mood right now? - Skala 0-10
-Q5: How is your arousal right now? - Skala 0-10
-Q6: Do you feel stressed right now? - Skala 0-10
-Q7: How much did you concentrate on the things you are doing right now? - Skala 0-10
-Q8: Do you feel irritable right now? - Wird meist vernachlässigt bei deren Auswertung - binär
+Q1: Did you perceive tinnitus right now? - Am wichtigsten für die Vorhersage - binär - 0 = nein / 1= ja
+Q2: How loud is the tinnitus right now? - Skala 0-10 - 0 = gut (leise) / 10 = schlecht (laut)
+Q3: How stressful is the tinnitus right now? - Skala 0-10 - 0 = gut (wenig) / 10 = schlecht (viel)
+Q4: How is your mood right now? - Skala 0-10 - 0 = schlecht / 10 = gut
+Q5: How is your arousal right now? - Skala 0-10 - 0 = gut (wenig) / 10 = schlecht (viel)
+Q6: Do you feel stressed right now? - Skala 0-10 - 0 = gut (wenig) / 10 = schlecht (viel)
+Q7: How much did you concentrate on the things you are doing right now? - Skala 0-10 - 0 = gut (wenig) / 10 = schlecht (viel)
+Q8: Do you feel irritable right now? - Wird meist vernachlässigt bei deren Auswertung - binär - 0 = nein / 1= ja
 
 Soundlevel: Umgebungslautstärke der ersten 30 Sekunden als Mittelwert (iOS und Android verschieden) - sound_env nehmen, User aber trotzdem nach OS unterscheiden
 sound_env: Umgebungslautstärke angepasst und mit "." separiert
